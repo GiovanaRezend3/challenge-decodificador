@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptador de Textos</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="logoNome">
+            <div class="img__mar">
+                <img src="assets/imagens/chapeulogo.jpeg" alt="Imagem do mar">
+            </div>
+            <div class="nome">
+                <h1>LuffyDecoder</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="entrada">
+                <div class="digite__texto"> 
+                    <textarea name="text-input" id="text-input" cols="30" rows="10" placeholder="Digite seu texto aqui..."></textarea>
+                </div>
+                <p class="atencao"><img src="assets/imagens/bi_exclamation-circle-fill.png" alt="exclamacao"> Apenas Letras minúsculas e sem acento. </p>
+            
+                <div class="botoes">
+                    <button class="criptografar" onclick="botaoCriptografar()">Criptografar</button>
+                    <button class="descriptografar" onclick="botaoDescriptografar()">Descriptografar</button>
+                </div> 
+            </div>
+        
+            <div class="saida">
+                <div class="conteudo__vazio">
+                    <img src="assets/imagens/luffy.png" alt="luffy" width="60%">
+                    <h3 id="h2__resultado">Nenhuma Mensagem Encontrada</h3>
+                    <p id="p__resultado">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <div class="conteudo__resultado__pronto">
+                    <textarea id="text-output" cols="30" rows="20"></textarea>
+                    <button class="botao__copiar" onclick="copiarTexto()">Copiar Texto</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <section>Feito por Giovana Rezende</section>
+    </footer>
+    
+    <script src="script/js.js"></script>
+</body>
+</html>
