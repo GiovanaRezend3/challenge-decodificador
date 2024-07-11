@@ -1,8 +1,11 @@
-# Challenge Decodificador de Texto 👨‍💻
+<h1 align="center">Challenge Decodificador de Texto 👨‍💻</h1
 
 
 Este projeto foi desenvolvido como parte do desafio final do curso Iniciante em Programação T7 - ONE + Alura
 
+
+
+![fundoTela](https://github.com/GiovanaRezend3/challenge-decodificador/assets/145282650/ad78cb63-d31c-4bfa-87a5-50e9a4371bfb)
 ## Linguagens Usadas e Objetivos
 
 - **Linguagens Utilizadas:** JavaScript, HTML, CSS
