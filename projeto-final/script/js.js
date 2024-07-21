@@ -3,7 +3,6 @@ var inputSaida = document.querySelector('#text-output');
 var areaConteudoVazio = document.querySelector('.conteudo__vazio');
 var areaConteudo__resultado__pronto = document.querySelector('.conteudo__resultado__pronto');
 
-
 areaConteudoVazio.style.display = 'block';
 areaConteudo__resultado__pronto.style.display = 'none';
 
@@ -13,22 +12,18 @@ function botaoCriptografar() {
     console.log("Texto criptografado:", textoEncriptado);
     inputSaida.value = textoEncriptado;
 
-   
     esconderMensagemNenhuma();
 
-    
     areaConteudoVazio.style.display = 'none';
     areaConteudo__resultado__pronto.style.display = 'block';
 }
 
 function criptografar(stringEncriptada) {
-    let matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     stringEncriptada = stringEncriptada.toLowerCase();
 
     for (let i = 0; i < matrizCodigo.length; i++) {
-        if (stringEncriptada.includes(matrizCodigo[i][0])) {
-            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-        }
+        stringEncriptada = stringEncriptada.split(matrizCodigo[i][0]).join(matrizCodigo[i][1]);
     }
 
     return stringEncriptada;
@@ -40,22 +35,18 @@ function botaoDescriptografar() {
     console.log("Texto descriptografado:", textoDescriptado);
     inputSaida.value = textoDescriptado;
 
-   
     esconderMensagemNenhuma();
 
-    
     areaConteudoVazio.style.display = 'none';
     areaConteudo__resultado__pronto.style.display = 'block';
 }
 
 function descriptografar(stringDescriptada) {
-    let matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     stringDescriptada = stringDescriptada.toLowerCase();
 
-    for (let i = 0; i < matrizCodigo.length; i++) {
-        if (stringDescriptada.includes(matrizCodigo[i][1])) {
-            stringDescriptada = stringDescriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
-        }
+    for (let i = matrizCodigo.length - 1; i >= 0; i--) {
+        stringDescriptada = stringDescriptada.split(matrizCodigo[i][1]).join(matrizCodigo[i][0]);
     }
 
     return stringDescriptada;
